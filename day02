@@ -1,0 +1,151 @@
+package com.itzhl.operator;
+
+public class OperatorTest2 {
+    public static void main(String[] args) {
+        //拆分三位数
+        int date =589;
+        //个位  取余
+        int ge =date%10;
+        int shi =date/10%10;
+        System.out.println(ge);
+        System.out.println(shi);
+        int bai=date/100;
+        System.out.println(bai);
+    }
+}
+public class OperatorDemo3 {
+    public static void main(String[] args) {
+        int a=5;
+        System.out.println(a+'a');//102
+        System.out.println(a+""+'a');//5a
+
+
+    }
+}
+public class OperatorDemo4 {
+    public static void main(String[] args) {
+        int a =10;
+        a++;//a=a+1
+        System.out.println(a);
+
+        int b =10;
+        b--;
+        System.out.println(b);
+        --b;
+        System.out.println(b);
+
+        System.out.println("----------------------------------------------------------------------");
+        //++--在变量前的区别
+        int i =10;
+        int j =++i;
+        System.out.println(i);//11
+        System.out.println(j);//11
+
+        int k=i++;
+        System.out.println(i);//12
+        System.out.println(k);//11
+        System.out.println("----------------------------------------------------------------------");
+        int c=3;
+        int t=5;
+        //c  3  4     5                4
+        //t  5               4    3        4
+        //rs    3   +  5  -  4  + 4   -5  +4    +2=9
+        int rs =c++ + ++c - --t + t-- -c--+ ++t +2;
+        System.out.println(rs);
+        System.out.println(c);
+        System.out.println(t);
+
+
+    }
+}
+public class OperatorDemo5 {
+    public static void main(String[] args) {
+        int a =10;
+        int b =200;
+        a+=b;
+        System.out.println(a);//a=a+b
+
+        byte i =10;
+        byte j =20;
+        i+=j;//i=(byte)(i+j)
+        System.out.println(i);
+
+        int m=10;
+        int n=5;
+        m-=n;
+        System.out.println(m);
+
+
+    }
+}
+public class OperatorDemo6 {
+    public static void main(String[] args) {
+        //关系运算符
+        int a = 10;
+        int b = 10;
+        boolean rs = a == b;
+        System.out.println(rs);
+        System.out.println(a!=b);
+
+        int i =10;
+        int j =5;
+        System.out.println(i==j);
+
+    }
+}
+public class OperatorDemo7 {
+    public static void main(String[] args) {
+        double size =9.8;
+        double storage =6;
+        System.out.println( size >=6.95 & storage>=8);
+        System.out.println( size >=6.95 | storage>=8);
+        System.out.println(!true);//F
+        System.out.println(true^true);//F
+        System.out.println(true^false);//F
+
+    }
+}
+public class OperatorDemo8 {
+    public static void main(String[] args) {
+        double score =98;
+        String rs = score >=60 ?"pass":"fail";
+        System.out.println(rs);//pass
+
+        int a =155;
+        int b=724;
+        char rs2 = a >= b ?'a':'b';
+        System.out.println(rs2);
+        System.out.println("----------------------------------------------------------------------------");
+        int i = 10;
+        int j = 30;
+        int k = 50;
+        int temp =i>j ?i:j;
+        int reMax =temp >k ? temp:k;
+        System.out.println(reMax);
+        System.out.println("----------------------------------------------------------------------------");
+        int rsMax1 =i >j? i > k? i:k :j>k?j:k;
+        System.out.println(rsMax1);
+
+    }
+}
+import java.util.Scanner;
+
+public class OperatorTest9 {
+    public static void main(String[] args) {
+        //请完成Java程序与用户交互，比如录入用户名称、年龄、性别
+        //得到键盘扫描器对象
+        Scanner sc =new Scanner(System.in);
+        //调用sc对象功能，等待接收数据
+        System.out.println("请输入您的年龄");
+        int age = sc.nextInt();
+        //等待用户输入数据，等用户输入完数据，并输入回车键
+        System.out.println("您的年龄是"+age);
+
+        System.out.println("请输入您的名称");
+        String name =sc.next( );//等待用户输入数据，等用户输入完数据，并输入回车键
+        System.out.println("欢迎"+name);
+
+
+
+    }
+}
